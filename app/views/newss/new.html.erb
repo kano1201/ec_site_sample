@@ -1,0 +1,9 @@
+<h1>ニュース投稿画面</h1>
+<%= form_with model: @news, local :true do |f| %>
+
+<h4>Title</h4>
+<%= f.text_field :news_title %>
+<h4>Body</h4>
+<%= f.text_area :news_body %>
+<%= f.submit '投稿' %>
+<% end %>
