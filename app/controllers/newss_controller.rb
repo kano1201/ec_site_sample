@@ -11,12 +11,17 @@ class NewssController < ApplicationController
   end
 
   def index
+    @newss = News.all
   end
 
   def show
+    @news = News.find(params[:id])
   end
 
   def destroy
+    @nwes = News.find(params[:id])
+    @news.destroy
+    redirect_to newss_path
   end
 
   private #一種の境界線、「ここから下はcontrollerの中でしか呼び出せません」
