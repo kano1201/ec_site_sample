@@ -2,7 +2,11 @@
   <%= attachment_image_tag @snap, :snap_image %>
   <p>Name:<%= @snap.user.name %> <%= @snap.created_at.strftime('%Y/%m/%d') %></p>
   <p>Comment:<%= @snap.snap_comment %></p>
-
+  <p>Item</p>
+    <p></p>
+    <p></p>
+    <p><!--item nameでitem_showにリンク--></p>
+    <p></p>
   <% if @snap.user == current_user %>
    <%= link_to "削除", snap_path(@snap), method: :delete, "data-confirm" => "本当に削除しますか？" %> <!--投稿削除-->
   <% end %>

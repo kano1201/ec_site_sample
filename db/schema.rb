@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_10_080220) do
+ActiveRecord::Schema.define(version: 2021_07_10_121842) do
+
+  create_table "news", force: :cascade do |t|
+    t.text "news_title"
+    t.text "news_body"
+    t.datetime "news_time"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "snaps", force: :cascade do |t|
     t.string "user_name"

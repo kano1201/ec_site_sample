@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :snaps, dependent: :destroy #user:snap=1:N
+  has_many :newss, dependent: :destroy
 end
