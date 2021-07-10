@@ -1,0 +1,10 @@
+<% @snaps.each do |snap| %>
+<!--コントローラから渡された@snaps変数内から1つずつ取り出して、snap変数へ格納-->
+<div>
+  <%= attachment_image_tag snap, :snap_image %>
+  <!--attachment_image_tagは、refile側が用意したヘルパーで、imgタグを作成。snap変数のsnap_image_idに保存された画像のimgタグを生成-->
+  <p>Name:<%= snap.user.name %></p>
+  <p>Comment:<%= snap.snap_comment %></p>
+
+</div>
+<% end %>

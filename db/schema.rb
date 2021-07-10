@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_10_071452) do
+ActiveRecord::Schema.define(version: 2021_07_10_080220) do
+
+  create_table "snaps", force: :cascade do |t|
+    t.string "user_name"
+    t.integer "user_id"
+    t.string "snap_image_id"
+    t.text "snap_comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_07_10_071452) do
     t.datetime "remember_created_at"
     t.string "name"
     t.text "address"
-    #t.string "telephon"
+    t.string "telephon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "telephone"

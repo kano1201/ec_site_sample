@@ -1,0 +1,13 @@
+<h1>Snap投稿画面</h1>
+<%= form_with model: @snap, local:true do |f| %>
+<!--orm_withを利用して、snaps_path（/snaps）に画像をアップロード-->
+
+ <h4>Snap photo</h4>
+ <%= f.attachment_field :snap_image %>
+ <!--画像アップロード-->
+
+ <h4>Comment</h4>
+ <%= f.text_area :snap_comment %>
+ <%= f.submit '送信' %>
+
+<% end %>
