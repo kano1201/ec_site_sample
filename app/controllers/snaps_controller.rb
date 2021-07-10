@@ -19,6 +19,9 @@ class SnapsController < ApplicationController
   end
 
   def destroy
+    @snap = Snap.find(params[:id])
+    @snap.destroy
+    redirect_to snaps_path
   end
 
   private
