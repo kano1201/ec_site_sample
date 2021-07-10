@@ -15,6 +15,7 @@ class SnapsController < ApplicationController
   end
 
   def show
+    @snap = Snap.find(params[:id])
   end
 
   def destroy
