@@ -7,7 +7,7 @@ class NewssController < ApplicationController
     @news = News.find(news_params)
     @news.user_id = current_user.id
     @news.save
-    redirect_to newss_path
+    redirect_to newss_index_path
   end
 
   def index
@@ -21,7 +21,7 @@ class NewssController < ApplicationController
   def destroy
     @nwes = News.find(params[:id])
     @news.destroy
-    redirect_to newss_path
+    redirect_to newss_index_path
   end
 
   private #一種の境界線、「ここから下はcontrollerの中でしか呼び出せません」

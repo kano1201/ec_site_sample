@@ -5,6 +5,6 @@
   <p>Body: <%= @news.news_body %></p>
 
   <% if @news.user == current_user %>
-   <%= link_to "削除", news_path(@news), method: :delete, "data-confirm" => "本当に削除しますか？" %> <!--投稿削除-->
+   <%= link_to "削除", newss_path(@news), method: :delete, "data-confirm" => "本当に削除しますか？" %> <!--投稿削除-->
   <% end %>
 </div>
