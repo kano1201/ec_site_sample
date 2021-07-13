@@ -11,7 +11,7 @@ class SnapsController < ApplicationController
   end
 
   def index
-    @snaps = Snap.all
+    @snaps = Snap.page(params[:page]).reverse_order
   end
 
   def show
