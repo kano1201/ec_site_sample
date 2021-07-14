@@ -2,7 +2,7 @@
 <% @newss.each do |news| %>
 
 <div>
-  <p>Day:<%= @news.created_at.strftime('%Y/%m/%d') %></p>
+  <p>Day:<%= news.created_at.strftime('%Y/%m/%d') %></p>
   <p>Title:<%= news.news_title %></p>
   <p>Body: <%= news.news_body %></p>
 </div>

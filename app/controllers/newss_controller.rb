@@ -4,7 +4,7 @@ class NewssController < ApplicationController
   end
 
   def create
-    @news = News.find(news_params)
+    @news = News.new(news_params)
     @news.user_id = current_user.id
     @news.save
     redirect_to newss_index_path
