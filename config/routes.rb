@@ -4,3 +4,4 @@ Rails.application.routes.draw do
   resources :snaps, only: [:new, :create, :index, :show, :destroy]
   resources :newss, only: [:new, :create, :index, :show, :destroy]
 end
+#アイテム作る

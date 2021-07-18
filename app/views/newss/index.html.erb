@@ -3,7 +3,7 @@
 
 <div>
   <p>Day:<%= news.created_at.strftime('%Y/%m/%d') %></p>
-  <p>Title:<%= link_to newss_path(news.id) do %><%= news.news_title %><%end%></p> <!--投稿の中身が表示されない（bodyも同様）-->
+  <p>Title:<%= link_to newss_path(news.id) do %><%= news.news_title %><%end%></p>
   <p>Body: <%= news.news_body %></p>
 </div>
 <% end %>
